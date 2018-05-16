@@ -1,0 +1,2 @@
+cells["1st700First"].value + " " + cells["700Last"].value
+#the content inside the first quotes is the name of the first cell, second puts a space between contents, third is the second cell name.
