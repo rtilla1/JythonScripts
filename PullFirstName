@@ -2,7 +2,7 @@ import re
 
 g = re.search(ur"([A-Z][a-z]*)(, )(([A-Z][a-z]*)\.?\s?[A-Z]?\.?)(,)?(\$c(([A-Z][a-z]*\.?,?)?))?((\$d((\d){4}))(-)?((\d){4})?)?", value)
 
-return g.group()
+return g.group(3)
 
 #group numbers and what they contain
 
