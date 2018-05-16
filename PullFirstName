@@ -1,5 +1,70 @@
 import re
 
-g = re.search(ur"([A-Z]([a-z])*)(, )([A-Z]([a-z])*)", value)
+g = re.search(ur"([A-Z][a-z]*)(, )(([A-Z][a-z]*)\.?\s?[A-Z]?\.?)(,)?(\$c(([A-Z][a-z]*\.?,?)?))?((\$d((\d){4}))(-)?((\d){4})?)?", value)
 
-return g.group(4)
+return g.group()
+
+#group numbers and what they contain
+
+For "Brackett, Charles,$d1892-1969."
+Group 1.	0-8	`Brackett`
+Group 2.	8-10	`, `
+Group 3.	10-17	`Charles`
+Group 4.	10-17	`Charles`
+Group 5.	17-18	`,`
+Group 9.	18-29	`$d1892-1969`
+Group 10.	18-24	`$d1892`
+Group 11.	20-24	`1892`
+Group 12.	23-24	`2`
+Group 13.	24-25	`-`
+Group 14.	25-29	`1969`
+Group 15.	28-29	`9`
+
+Full match	31-56	`Wilder, Billy,$d1906-2002`
+Group 1.	31-37	`Wilder`
+Group 2.	37-39	`, `
+Group 3.	39-44	`Billy`
+Group 4.	39-44	`Billy`
+Group 5.	44-45	`,`
+Group 9.	45-56	`$d1906-2002`
+Group 10.	45-51	`$d1906`
+Group 11.	47-51	`1906`
+Group 12.	50-51	`6`
+Group 13.	51-52	`-`
+Group 14.	52-56	`2002`
+Group 15.	55-56	`2`
+Match 3
+Full match	58-91	`Marshman, D. M.,$cJr.,$d1922-2015`
+Group 1.	58-66	`Marshman`
+Group 2.	66-68	`, `
+Group 3.	68-73	`D. M.`
+Group 4.	68-69	`D`
+Group 5.	73-74	`,`
+Group 6.	74-80	`$cJr.,`
+Group 7.	76-80	`Jr.,`
+Group 8.	76-80	`Jr.,`
+Group 9.	80-91	`$d1922-2015`
+Group 10.	80-86	`$d1922`
+Group 11.	82-86	`1922`
+Group 12.	85-86	`2`
+Group 13.	86-87	`-`
+Group 14.	87-91	`2015`
+Group 15.	90-91	`5`
+Match 4
+Full match	93-115	`Turrin, Joseph,$d1947-`
+Group 1.	93-99	`Turrin`
+Group 2.	99-101	`, `
+Group 3.	101-107	`Joseph`
+Group 4.	101-107	`Joseph`
+Group 5.	107-108	`,`
+Group 9.	108-115	`$d1947-`
+Group 10.	108-114	`$d1947`
+Group 11.	110-114	`1947`
+Group 12.	113-114	`7`
+Group 13.	114-115	`-`
+Match 5
+Full match	116-132	`Mirisch, Walter.`
+Group 1.	116-123	`Mirisch`
+Group 2.	123-125	`, `
+Group 3.	125-132	`Walter.`
+Group 4.	125-131	`Walter`
