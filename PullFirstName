@@ -1,0 +1,5 @@
+import re
+
+g = re.search(ur"([A-Z]([a-z])*)(, )([A-Z]([a-z])*)", value)
+
+return g.group(4)
