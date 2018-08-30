@@ -39,3 +39,4 @@ leftover Regex or code (may be useful)
 > \[{2}(marcrelators\=)([[:alpha:]]{3})
 > partition(value,/\[{2}(marcrelators\=)/)
 > (^(.)+(, )?(.)+ )\[{2}([[:alpha:]]+\=)([[:alpha:]]+)\/([[:alpha:]]+)\]{2}
+partition(value, (/(\[){2}=[[:alpha:]]+/))
