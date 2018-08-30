@@ -1,0 +1,20 @@
+# call requirements
+import re
+
+# if value includes a statement inside double square brackets
+
+if value == '':
+
+# create a new column for each unique pair and put everything before the double square brackets into the cell
+
+# then, evaluate whether there is a column named with either the Code or Text inside the square brackets
+# if yes, put everything before the double square brackets into a cell inside that column
+# if no, create a new column named with the contents inside the square bracket, 
+# and then put everything before the double square brackets into the cell.
+
+
+# otherwise, return the original value
+else:
+  return value
+
+Regex= \[{2}([[:alpha:]]+\=)([[:alpha:]]+)\/([[:alpha:]]+)\]{2}
