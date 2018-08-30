@@ -1,0 +1,5 @@
+import re
+
+g = re.search(ur'(^(.)+(, )?(.)+ )\[{2}([[:alpha:]]+\=)([[:alpha:]]+)\/([[:alpha:]]+)\]{2}', value)
+
+return g.group(7)
